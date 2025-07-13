@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Love Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0;
+      color: #ff3399;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .message-box {
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      width: 80%;
+      max-width: 400px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+<div class="message-box">
+  <h1>Today's Love Message 💌</h1>
+  <p id="dailyMessage">Loading...</p>
+</div>
+
+<script>
+  const messages = [
+    "Good morning, my beautiful 💖 You are the light of my life 🌞",
+    "I just wanted to remind you how amazing you are 😘",
+    "Every day with you is a gift 🎁 Can't wait to see you soon!",
+    "You're my favorite notification 💌 Just wanted to say I love you!",
+    "I hope your day is as beautiful as your smile 🌸"
+  ];
+
+  // Get current day index to show a new message every day
+  const today = new Date();
+  const messageIndex = today.getDate() % messages.length;
+
+  // Display the message
+  document.getElementById("dailyMessage").innerText = messages[messageIndex];
+</script>
+
+</body>
+</html>
+(No Title)
